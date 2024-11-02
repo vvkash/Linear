@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Usage Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #7BAFD4; /* Carolina Blue */
+            color: #FFFFFF; /* White text for contrast */
+        }
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+        }
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            font-size: 14px;
+        }
+        th {
+            background-color: #E6E6E6;
+            color: #333333;
+        }
+        tr:hover {
+            background-color: #F9F9F9;
+        }
+        .recommendations {
+            margin-top: 40px;
+        }
+        .recommendations h2 {
+            color: #FFFFFF;
+        }
+        .recommendations ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .recommendations a {
+            color: #FFD700; /* Gold color for links */
+            text-decoration: none;
+        }
+        .recommendations a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Website Usage</h1>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Website</th>
+                <th>Time Spent (minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <div class="recommendations">
+        <h2>Recommended Websites:</h2>
+        <ul>
+            <li><a href="https://www.brainly.com" target="_blank">Brainly</a></li>
+            <li><a href="https://www.duolingo.com" target="_blank">Duolingo</a></li>
+            <li><a href="https://brilliant.org" target="_blank">Brilliant</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Fetch the usage data and display it
+        chrome.storage.local.get(['websiteUsage'], function(data) {
+            const usageData = data.websiteUsage || [];
+            const tbody = document.querySelector('#resultsTable tbody');
+
+            if (usageData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="2">No data available.</td></tr>';
+                return;
+            }
+
+            usageData.forEach(site => {
+                const row = document.createElement('tr');
+
+                const websiteCell = document.createElement('td');
+                websiteCell.textContent = site.url;
+                row.appendChild(websiteCell);
+
+                const timeCell = document.createElement('td');
+                timeCell.textContent = site.timeSpent.toFixed(2);
+                row.appendChild(timeCell);
+
+                tbody.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>
