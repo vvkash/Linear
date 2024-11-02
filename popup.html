@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Linear: lock in</title>
-        <style>
-            body {
-                width: 300px; 
-                height: 400px;
-                margin: 0; 
-                padding: 10px; 
-                box-sizing: border-box;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Linear: do what matters.</h1>
-        <input id="website" type="text" placeholder="Enter a website: ">
-        <input id="timeLimit" type="number" placeholder="Time limit in minutes">
-        <button id="addSite">Add</button>
-        <ul id="siteList"></ul>
-        <script src="popup.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear: Lock In</title>
+    <link rel="stylesheet" href="p2.css"> <!-- Updated CSS file name here -->
+</head>
+<body>
+    <h1>Linear: Do What Matters</h1>
+    <input id="website" type="text" placeholder="Enter a website" aria-label="Website URL">
+    <input id="timeLimit" type="number" placeholder="Time limit in minutes" aria-label="Time limit in minutes">
+    <button id="addSite">Add Website</button>
+    <ul id="siteList" aria-label="List of websites"></ul>
+    <script src="popup.js"></script>
+</body>
 </html>
