@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,19 +7,19 @@
 
 
 body {
+    width: 350px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #FFFFFF; 
-    color: #13294B; 
-    width: 300px;
+    background-color: #FFFFFF;
+    color: #13294B;
 }
 
-
+/* Header */
 h1 {
     font-size: 1.8em;
     margin-bottom: 20px;
@@ -26,7 +27,7 @@ h1 {
     text-align: center;
 }
 
-
+/* Input Styles */
 input[type="text"], input[type="number"] {
     width: 100%;
     padding: 10px;
@@ -38,7 +39,7 @@ input[type="text"], input[type="number"] {
     color: #13294B;
 }
 
-
+/* Button Styles */
 button {
     padding: 10px 15px;
     font-size: 1em;
@@ -56,7 +57,7 @@ button:hover {
     background-color: #2C7ABF; 
 }
 
-
+/* List Styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -70,3 +71,38 @@ li {
     border-bottom: 1px solid #ddd;
     color: #13294B;
 }
+/* Dropdown Table Styles */
+.dropdown-content {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Table Styling */
+#websiteTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Gaegu', sans-serif;
+    color: #13294B;
+}
+
+#websiteTable th, #websiteTable td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#websiteTable th {
+    background-color: #4B9CD3;
+    color: white;
+    font-weight: bold;
+}
+
+#websiteTable td {
+    background-color: #f9f9f9;
+}
+

@@ -1,13 +1,44 @@
-document.getElementById("addSite").addEventListener("click", () => {
-    const website = document.getElementById("website").value;
-    const timeLimit = parseInt(document.getElementById("timeLimit").value);
-  
-    chrome.storage.local.get({ sites: {} }, (data) => {
-      const sites = data.sites;
-      sites[website] = { timeSpent: 0, timeLimit: timeLimit };
-      chrome.storage.local.set({ sites });
-    });
-  
-    document.getElementById("siteList").innerHTML += `<li>${website} - ${timeLimit} minutes</li>`;
-  });
-  
+document.getElementById('addSite').addEventListener('click', () => {
+  const websiteInput = document.getElementById('website');
+  const timeLimitInput = document.getElementById('timeLimit');
+  const tableBody = document.querySelector('#websiteTable tbody');
+
+  // Check if the table already has 5 rows
+  if (tableBody.rows.length >= 5) {
+      alert("You can only add up to 5 websites.");
+      return;
+  }
+
+  // Get user input values
+  const website = websiteInput.value.trim();
+  const timeLimit = timeLimitInput.value.trim();
+
+  // Check that both inputs are filled out
+  if (website && timeLimit) {
+      // Create a new table row
+      const row = document.createElement('tr');
+
+      // Create website cell
+      const websiteCell = document.createElement('td');
+      websiteCell.textContent = website;
+      row.appendChild(websiteCell);
+
+      // Create time limit cell
+      const timeLimitCell = document.createElement('td');
+      timeLimitCell.textContent = `${timeLimit} min`;
+      row.appendChild(timeLimitCell);
+
+      // Append the row to the table body
+      tableBody.appendChild(row);
+
+      // Clear the input fields
+      websiteInput.value = '';
+      timeLimitInput.value = '';
+  }
+});
+
+// Toggle dropdown visibility when button is clicked
+document.getElementById('dropdownToggle').addEventListener('click', () => {
+  const siteList = document.getElementById('siteList');
+  siteList.style.display = siteList.style.display === 'block' ? 'none' : 'block';
+});

@@ -4,14 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linear: Lock In</title>
-    <link rel="stylesheet" href="p2.css"> <!-- Updated CSS file name here -->
+    <link rel="stylesheet" href="p2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gaegu&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Linear: Do What Matters</h1>
+    <h1>Linear: Do What Matters.</h1>
     <input id="website" type="text" placeholder="Enter a website" aria-label="Website URL">
     <input id="timeLimit" type="number" placeholder="Time limit in minutes" aria-label="Time limit in minutes">
     <button id="addSite">Add Website</button>
-    <ul id="siteList" aria-label="List of websites"></ul>
+    
+
+    <!-- Dropdown Table Container -->
+<div class="dropdown">
+    <button id="dropdownToggle">Show Entered Websites</button>
+    <div id="siteList" class="dropdown-content">
+        <table id="websiteTable">
+            <thead>
+                <tr>
+                    <th>Website</th>
+                    <th>Time Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User-added websites will appear here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
     <script src="popup.js"></script>
 </body>
 </html>
