@@ -1,0 +1,66 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #FFFFFF; 
+    color: #13294B; 
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #4B9CD3; 
+    text-align: center;
+}
+
+/* Label Styles */
+label {
+    width: 100%;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Input Styles */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #4B9CD3; 
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #F1F5F9; 
+    color: #13294B;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    background-color: #4B9CD3; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2C7ABF; 
+}
