@@ -83,3 +83,42 @@ button:hover {
 #websiteTable td {
     background-color: #f9f9f9;
 }
+
+
+/* Adjusted styles for the dropdown content */
+.dropdown-content {
+    display: none;
+    max-height: 300px; /* Increased max height */
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; /* Ensure full width */
+    margin-top: 10px; /* Added margin for spacing */
+}
+
+/* Table Styling */
+#websiteTable {
+    width: 100%; /* Ensure table takes full width */
+    border-collapse: collapse;
+    font-family: 'Gaegu', sans-serif;
+    color: #13294B;
+    font-size: 1.1em; /* Increased font size */
+}
+
+#websiteTable th, #websiteTable td {
+    padding: 12px; /* Increased padding */
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#websiteTable th {
+    background-color: #4B9CD3;
+    color: white;
+    font-weight: bold;
+}
+
+#websiteTable td {
+    background-color: #f9f9f9;
+}
