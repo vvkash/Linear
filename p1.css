@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center all text elements */
+    margin: 50px;
+    background: linear-gradient(to bottom right, #7BAFD4 30%, #13294B); /* Smooth gradient from Carolina Blue to Black */
+    color: #000000; /* Changed text color to black for better contrast on white background */
+    position: relative; /* Make sure to set position relative for the dots */
+    overflow: hidden; 
+    width: 400; /* Change width as needed */
+    height: 700; /* Change height as needed */
+    padding: 10px;
+    box-sizing: border-box;/* Prevent dots from overflowing the body */
+}
+
+h1 {
+    font-family: bold;
+    color: #ffffff; /* White for header text */
+    overflow: hidden; /* Ensures that the text doesn't overflow */
+    white-space: nowrap; /* Keeps text on one line */
+    border-right: 4px solid #FFFFFF; /* Cursor effect */
+    width: 0; /* Initial width to start typing effect */
+    animation: typing 4s steps(20) forwards, blink-caret 0.75s step-end infinite; /* Typing and caret blink */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ffffff; /* Light gray for paragraph text */
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Center buttons within their container */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #005582; /* Darker blue for text */
+    border: none;
+    cursor: pointer;
+    border-radius: 25px 10 0; /* Adjusted border radius for style */
+    margin: 0 10px; /* Space between buttons */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+button:hover {
+    background-color: #E6E6E6; /* Button hover color */
+    box-shadow: 0 4px 20px rgba(0, 91, 179, 0.5); /* Blue shadow effect */
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from { width: 0; } /* Start with width 0 */
+    to { width: 100%; } /* End with full width */
+}
+
+/* Keyframes for caret blinking */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #FFFFFF; }
+}
+
+/* Styles for background dots */
+.background-dots {
+    position: absolute; /* Positioning for the dots */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to other elements */
+    overflow: hidden; /* Ensure dots do not overflow */
+}
+
+.dot {
+    position: absolute; /* Positioning for each dot */
+    background-color: rgba(255, 255, 255, 0.5); /* Light color for the dots */
+    border-radius: 50%; /* Make dots circular */
+    animation: move 5s infinite; /* Infinite animation */
+}
+
+/* Keyframes for dot movement */
+@keyframes move {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    100% {
+        transform: translateY(-100vh); /* Move up to the top */
+    }
+    
+}
+.resizable-image {
+    width: 50px;  /* Set the desired width */
+    height: 40px;  /* Maintains the aspect ratio */
+    position: absolute;  /* Position the image absolutely */
+    top: -4px;  /* Distance from the top */
+    right: 20px;  /* Distance from the right */
+    border-radius: 50%;
+   
+}

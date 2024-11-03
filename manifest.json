@@ -1,10 +1,21 @@
 {
     "manifest_version": 3,
-    "name" : "Linear",
-    "version": "0.5",
-    "permissions": ["tabs","storage","notifications","alarms"],
-    "action" : {
-        "default_popup": "popup.html"
+    "name": "Website Usage Tracker",
+    "version": "1.0",
+    "description": "Analyzes your website usage and suggests productive alternatives.",
+    "permissions": [
+        "storage",
+        "history",
+        "tabs",
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "p1.html"
     },
-    "host_permissions" : ["<all_urls>"]
+    "background": {
+        "service_worker": "p1.js"   
+    },
+    "icons": {
+      
+    }
 }
