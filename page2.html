@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linear: Lock In</title>
+    <link rel="stylesheet" href="page2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gaegu&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Linear: Do What Matters.</h1>
+    <input id="website" type="text" placeholder="Enter a website" aria-label="Website URL">
+    <input id="timeLimit" type="number" placeholder="Time limit in minutes" aria-label="Time limit in minutes">
+    <button id="addSite">Add Website</button>
+
+    <!-- Dropdown Table Container -->
+    <div class="dropdown">
+        <button id="dropdownToggle">Show Entered Websites</button>
+        <div id="siteList" class="dropdown-content">
+            <table id="websiteTable">
+                <thead>
+                    <tr>
+                        <th>Website</th>
+                        <th>Time Limit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User-added websites will appear here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button id="savePreferences">Save and Continue</button>
+
+    <script src="page2.js"></script>
+</body>
+</html>

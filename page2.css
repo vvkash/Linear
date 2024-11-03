@@ -1,26 +1,21 @@
-/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Body Styles */
 body {
+    width: 350px;
+    height: 600px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #FFFFFF; 
-    color: #13294B; 
-    width: 300px;
-    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+    color: #13294B;
 }
 
-/* Heading Styles */
 h1 {
     font-size: 1.8em;
     margin-bottom: 20px;
@@ -28,14 +23,6 @@ h1 {
     text-align: center;
 }
 
-/* Label Styles */
-label {
-    width: 100%;
-    font-size: 1em;
-    margin-top: 10px;
-}
-
-/* Input Styles */
 input[type="text"], input[type="number"] {
     width: 100%;
     padding: 10px;
@@ -47,7 +34,6 @@ input[type="text"], input[type="number"] {
     color: #13294B;
 }
 
-/* Button Styles */
 button {
     padding: 10px 15px;
     font-size: 1em;
@@ -63,4 +49,37 @@ button {
 
 button:hover {
     background-color: #2C7ABF; 
+}
+
+.dropdown-content {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#websiteTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Gaegu', sans-serif;
+    color: #13294B;
+}
+
+#websiteTable th, #websiteTable td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#websiteTable th {
+    background-color: #4B9CD3;
+    color: white;
+    font-weight: bold;
+}
+
+#websiteTable td {
+    background-color: #f9f9f9;
 }
