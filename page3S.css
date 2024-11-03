@@ -7,18 +7,18 @@
 
 /* Body Styles */
 body {
+    width: 350px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #FFFFFF; 
-    color: #13294B; 
-    width: 300px;
-    margin: 0 auto;
+    background-color: #FFFFFF;
+    color: #13294B;
 }
 
-/* Heading Styles */
+/* Header */
 h1 {
     font-size: 1.8em;
     margin-bottom: 20px;
@@ -26,27 +26,61 @@ h1 {
     text-align: center;
 }
 
-/* Table Styles */
-table {
+/* Dropdown Table Styles */
+.dropdown {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
 }
 
-th, td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+.dropdown-content {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
     font-size: 1em;
+    color: white;
+    background-color: #4B9CD3; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2C7ABF; 
+}
+
+/* Table Styling */
+#usageTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Gaegu', sans-serif;
     color: #13294B;
 }
 
-th {
-    background-color: #F1F5F9;
+#usageTable th, #usageTable td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#usageTable th {
+    background-color: #4B9CD3;
+    color: white;
     font-weight: bold;
 }
 
-tr:hover {
+#usageTable td {
     background-color: #f9f9f9;
 }
 
@@ -64,14 +98,13 @@ tr:hover {
 }
 
 /* List Styles */
-ul {
+.recommendations ul {
     list-style-type: none;
     padding: 0;
     width: 100%;
-    margin-top: 20px;
 }
 
-li {
+.recommendations li {
     padding: 8px;
     margin-bottom: 5px;
     border-bottom: 1px solid #ddd;
@@ -80,11 +113,11 @@ li {
 }
 
 /* Link Styles */
-a {
+.recommendations a {
     color: #4B9CD3;
     text-decoration: none;
 }
 
-a:hover {
+.recommendations a:hover {
     text-decoration: underline;
 }
